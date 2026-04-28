@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { DM_Sans, Playfair_Display } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
 import { Toaster } from 'sonner'
 import './globals.css'
 
@@ -32,7 +31,6 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         {children}
         <Toaster position="bottom-right" richColors />
-        {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
   )
