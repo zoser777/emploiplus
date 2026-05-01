@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useEffect, useState } from 'react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
@@ -13,8 +13,8 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { Settings, Plus, Pencil, Trash2, Eye, EyeOff } from 'lucide-react'
 import { toast } from 'sonner'
 
-const EMPTY = { title: '', desc: '', icon: '⚙️', isActive: true }
-const ICONS = ['⚙️','💼','🔍','🎓','👥','🏢','📊','💡','🌍','🚀','📱','🤝','📋','✅','🎯']
+const EMPTY = { title: '', desc: '', icon: 'âš™ï¸', isActive: true }
+const ICONS = ['âš™ï¸','ðŸ’¼','ðŸ”','ðŸŽ“','ðŸ‘¥','ðŸ¢','ðŸ“Š','ðŸ’¡','ðŸŒ','ðŸš€','ðŸ“±','ðŸ¤','ðŸ“‹','âœ…','ðŸŽ¯']
 
 export default function ServicesPage() {
   const [items, setItems] = useState<any[]>([])
@@ -26,7 +26,7 @@ export default function ServicesPage() {
 
   const load = async () => {
     const res = await fetch('/api/admin/services')
-    setItems(await res.json()); setLoading(false)
+    const d = await res.json(); setItems(Array.isArray(d) ? d : []); setLoading(false)
   }
   useEffect(() => { load() }, [])
 
@@ -43,10 +43,10 @@ export default function ServicesPage() {
     setSaving(true)
     if (editing) {
       await fetch(`/api/admin/services/${editing.id}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(form) })
-      toast.success('Service mis à jour')
+      toast.success('Service mis Ã  jour')
     } else {
       await fetch('/api/admin/services', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(form) })
-      toast.success('Service créé')
+      toast.success('Service crÃ©Ã©')
     }
     setSaving(false); setModalOpen(false); load()
   }
@@ -58,7 +58,7 @@ export default function ServicesPage() {
 
   const del = async (id: string) => {
     await fetch(`/api/admin/services/${id}`, { method: 'DELETE' })
-    toast.success('Service supprimé'); load()
+    toast.success('Service supprimÃ©'); load()
   }
 
   return (
@@ -111,7 +111,7 @@ export default function ServicesPage() {
                       </AlertDialogTrigger>
                       <AlertDialogContent>
                         <AlertDialogHeader><AlertDialogTitle>Supprimer ce service ?</AlertDialogTitle>
-                          <AlertDialogDescription>Cette action est irréversible.</AlertDialogDescription>
+                          <AlertDialogDescription>Cette action est irrÃ©versible.</AlertDialogDescription>
                         </AlertDialogHeader>
                         <AlertDialogFooter>
                           <AlertDialogCancel>Annuler</AlertDialogCancel>
@@ -132,8 +132,8 @@ export default function ServicesPage() {
           <DialogHeader><DialogTitle>{editing ? 'Modifier le service' : 'Nouveau service'}</DialogTitle></DialogHeader>
           <div className="space-y-4 py-2">
             <div className="space-y-1.5"><Label>Titre *</Label><Input value={form.title} onChange={e => set('title', e.target.value)} placeholder="Ex: Publication d'offres" /></div>
-            <div className="space-y-1.5"><Label>Description *</Label><Textarea value={form.desc} onChange={e => set('desc', e.target.value)} rows={3} placeholder="Décrivez ce service..." /></div>
-            <div className="space-y-1.5"><Label>Icône</Label>
+            <div className="space-y-1.5"><Label>Description *</Label><Textarea value={form.desc} onChange={e => set('desc', e.target.value)} rows={3} placeholder="DÃ©crivez ce service..." /></div>
+            <div className="space-y-1.5"><Label>IcÃ´ne</Label>
               <div className="flex flex-wrap gap-2">
                 {ICONS.map(ic => (
                   <button key={ic} type="button" onClick={() => set('icon', ic)}
@@ -151,7 +151,7 @@ export default function ServicesPage() {
           <DialogFooter>
             <Button variant="outline" onClick={() => setModalOpen(false)}>Annuler</Button>
             <Button onClick={save} disabled={saving} className="bg-teal-600 hover:bg-teal-700 text-white">
-              {saving ? 'Enregistrement...' : editing ? 'Mettre à jour' : 'Créer'}
+              {saving ? 'Enregistrement...' : editing ? 'Mettre Ã  jour' : 'CrÃ©er'}
             </Button>
           </DialogFooter>
         </DialogContent>
@@ -159,3 +159,4 @@ export default function ServicesPage() {
     </AdminLayout>
   )
 }
+

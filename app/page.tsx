@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
@@ -27,7 +27,7 @@ export default function HomePage() {
   const [newsletterEmail, setNewsletterEmail] = useState('')
   const [newsletterLoading, setNewsletterLoading] = useState(false)
 
-  // Données dynamiques
+  // DonnÃ©es dynamiques
   const [jobs, setJobs] = useState<any[]>([])
   const [formations, setFormations] = useState<any[]>([])
   const [partners, setPartners] = useState<any[]>([])
@@ -75,7 +75,7 @@ export default function HomePage() {
         body: JSON.stringify({ email: newsletterEmail }),
       })
       if (res.ok) {
-        toast.success('Abonnement confirmé ! Vous recevrez nos meilleures offres.')
+        toast.success('Abonnement confirmÃ© ! Vous recevrez nos meilleures offres.')
         setNewsletterEmail('')
       } else {
         toast.error("Erreur lors de l'inscription.")
@@ -91,7 +91,7 @@ export default function HomePage() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      {/* ── HERO ─────────────────────────────────────────────────── */}
+      {/* â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="relative bg-gradient-to-br from-[#001a33] via-[#003d80] to-[#0077cc] py-24 md:py-32 overflow-hidden">
         {/* Image de fond hero */}
         <div className="absolute inset-0">
@@ -110,20 +110,20 @@ export default function HomePage() {
               <img
                 src="/images/logo.jpeg"
                 alt="Emploi Plus"
-                className="h-20 md:h-28 w-auto object-contain brightness-0 invert drop-shadow-2xl"
+                className="h-28 md:h-36 w-auto object-contain brightness-0 invert drop-shadow-2xl"
               />
             </div>
 
             <span className="inline-flex items-center gap-2 bg-[#0099ff]/20 text-white/95 border border-[#00c3ff]/35 text-sm font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
-              🇨🇬 N°1 au Congo-Brazzaville
+              ðŸ‡¨ðŸ‡¬ NÂ°1 au Congo-Brazzaville
             </span>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
               Trouvez votre{' '}
-              <span className="text-[#00c3ff]">prochaine opportunité</span>{' '}
+              <span className="text-[#00c3ff]">prochaine opportunitÃ©</span>{' '}
               professionnelle au Congo
             </h1>
             <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-10">
-              Emploi Plus connecte les talents avec les meilleures entreprises à Brazzaville et Pointe-Noire.
+              Emploi Plus connecte les talents avec les meilleures entreprises Ã  Brazzaville et Pointe-Noire.
             </p>
 
             {/* Barre de recherche */}
@@ -184,21 +184,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── CATÉGORIES ───────────────────────────────────────────── */}
+      {/* â”€â”€ CATÃ‰GORIES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="py-8 bg-white border-b border-gray-100">
         <div className="container mx-auto px-6">
-          {/* Boutons rapides — secteurs clés */}
+          {/* Boutons rapides â€” secteurs clÃ©s */}
           <div className="flex flex-wrap justify-center gap-2 mb-3">
             {[
-              { key: 'all',        label: 'Tous',             icon: '🏢' },
-              { key: 'tech',       label: 'Informatique',     icon: '💻' },
-              { key: 'finance',    label: 'Finance',          icon: '💰' },
-              { key: 'sante',      label: 'Santé',            icon: '🏥' },
-              { key: 'petrole',    label: 'Pétrole & Gaz',    icon: '🛢️' },
-              { key: 'transport',  label: 'Transport',        icon: '🚗' },
-              { key: 'logistique', label: 'Logistique',       icon: '📦' },
-              { key: 'agro',       label: 'Agro-alimentaire', icon: '🍽️' },
-              { key: 'btp',        label: 'BTP',              icon: '🏗️' },
+              { key: 'all',        label: 'Tous',             icon: 'ðŸ¢' },
+              { key: 'tech',       label: 'Informatique',     icon: 'ðŸ’»' },
+              { key: 'finance',    label: 'Finance',          icon: 'ðŸ’°' },
+              { key: 'sante',      label: 'SantÃ©',            icon: 'ðŸ¥' },
+              { key: 'petrole',    label: 'PÃ©trole & Gaz',    icon: 'ðŸ›¢ï¸' },
+              { key: 'transport',  label: 'Transport',        icon: 'ðŸš—' },
+              { key: 'logistique', label: 'Logistique',       icon: 'ðŸ“¦' },
+              { key: 'agro',       label: 'Agro-alimentaire', icon: 'ðŸ½ï¸' },
+              { key: 'btp',        label: 'BTP',              icon: 'ðŸ—ï¸' },
             ].map(sector => (
               <button key={sector.key} onClick={() => setActiveCategory(sector.key)}
                 className={`flex items-center gap-1.5 px-4 py-2 rounded-full font-medium text-sm transition-all border-2 ${
@@ -222,16 +222,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── OFFRES ───────────────────────────────────────────────── */}
+      {/* â”€â”€ OFFRES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       {filteredJobs.length > 0 && (
         <section className="py-16 bg-white">
           <div className="container mx-auto px-6">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-10">
               <div>
                 <span className="inline-flex items-center gap-2 bg-[#0099ff]/10 text-[#0099ff] text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-3">
-                  🔥 Récentes
+                  ðŸ”¥ RÃ©centes
                 </span>
-                <h2 className="font-serif text-3xl md:text-4xl text-[#001a33]">Dernières offres d&apos;emploi</h2>
+                <h2 className="font-serif text-3xl md:text-4xl text-[#001a33]">DerniÃ¨res offres d&apos;emploi</h2>
                 <p className="text-gray-600 mt-1">{filteredJobs.length} offre{filteredJobs.length !== 1 ? 's' : ''} disponible{filteredJobs.length !== 1 ? 's' : ''}</p>
               </div>
               <Link href="/offres">
@@ -247,14 +247,14 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* ── FORMATIONS ───────────────────────────────────────────── */}
+      {/* â”€â”€ FORMATIONS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       {formations.length > 0 && (
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-6">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-10">
               <div>
                 <span className="inline-flex items-center gap-2 bg-[#0099ff]/10 text-[#0099ff] text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-3">
-                  🎓 Formations
+                  ðŸŽ“ Formations
                 </span>
                 <h2 className="font-serif text-3xl md:text-4xl text-[#001a33]">Formations disponibles</h2>
               </div>
@@ -271,7 +271,7 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* ── PARTENAIRES ──────────────────────────────────────────── */}
+      {/* â”€â”€ PARTENAIRES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       {partners.length > 0 && (
         <section className="py-16 bg-[#001a33] relative overflow-hidden">
           <div className="absolute inset-0 opacity-5"
@@ -299,13 +299,13 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* ── TÉMOIGNAGES ──────────────────────────────────────────── */}
+      {/* â”€â”€ TÃ‰MOIGNAGES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       {testimonials.length > 0 && (
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-6">
             <div className="text-center mb-12">
               <span className="inline-flex items-center gap-2 bg-[#0099ff]/10 text-[#0099ff] text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-3">
-                💬 Témoignages
+                ðŸ’¬ TÃ©moignages
               </span>
               <h2 className="font-serif text-3xl md:text-4xl text-[#001a33]">Ce qu&apos;ils disent d&apos;Emploi Plus</h2>
             </div>
@@ -336,7 +336,7 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* ── NEWSLETTER ───────────────────────────────────────────── */}
+      {/* â”€â”€ NEWSLETTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="py-16 bg-gradient-to-r from-[#0099ff] to-[#001a33] relative overflow-hidden">
         <div className="absolute inset-0">
           <img
@@ -348,11 +348,11 @@ export default function HomePage() {
         <div className="container mx-auto px-6 relative">
           <div className="max-w-xl mx-auto text-center">
             <span className="inline-flex items-center gap-2 bg-white/20 text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
-              ✉️ Newsletter
+              âœ‰ï¸ Newsletter
             </span>
             <h2 className="font-serif text-3xl md:text-4xl text-white mb-4">Recevez les offres par email</h2>
             <p className="text-white/75 mb-8">
-              Inscrivez-vous à notre newsletter et soyez les premiers informés des nouvelles opportunités.
+              Inscrivez-vous Ã  notre newsletter et soyez les premiers informÃ©s des nouvelles opportunitÃ©s.
             </p>
             <form onSubmit={handleNewsletter} className="flex flex-col sm:flex-row gap-3">
               <Input
@@ -369,7 +369,7 @@ export default function HomePage() {
                 {newsletterLoading ? 'Inscription...' : "S'inscrire"}
               </Button>
             </form>
-            <p className="text-white/50 text-xs mt-4">Aucun spam. Désinscription en un clic.</p>
+            <p className="text-white/50 text-xs mt-4">Aucun spam. DÃ©sinscription en un clic.</p>
           </div>
         </div>
       </section>
@@ -382,3 +382,5 @@ export default function HomePage() {
     </div>
   )
 }
+
+
