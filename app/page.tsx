@@ -110,7 +110,7 @@ export default function HomePage() {
               <img
                 src="/images/logo.jpeg"
                 alt="Emploi Plus"
-                className="h-28 md:h-36 w-auto object-contain brightness-0 invert drop-shadow-2xl"
+                className="h-28 md:h-36 w-auto object-contain drop-shadow-2xl"
               />
             </div>
 
@@ -382,6 +382,7 @@ export default function HomePage() {
     </div>
   )
 }
+
 
 
 
