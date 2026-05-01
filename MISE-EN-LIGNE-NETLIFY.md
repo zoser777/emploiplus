@@ -6,7 +6,7 @@
 2. Créez un compte puis cliquez **New project**
 3. Remplissez :
    - **Name** : emploiplus
-   - **Database Password** : notez-le bien
+   - **Database Password** : notez-le bien Emploiplus@2026
    - **Region** : West EU (Ireland)
 4. Attendez ~2 minutes que le projet se crée
 5. Allez dans **SQL Editor** → **New query**
