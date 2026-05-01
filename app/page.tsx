@@ -115,7 +115,7 @@ export default function HomePage() {
             </div>
 
             <span className="inline-flex items-center gap-2 bg-[#0099ff]/20 text-white/95 border border-[#00c3ff]/35 text-sm font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
-              ðŸ‡¨ðŸ‡¬ NÂ°1 au Congo-Brazzaville
+              ðŸ‡¨ðŸ‡¬ La plateforme internationale de la République du Congo
             </span>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
               Trouvez votre{' '}
@@ -382,5 +382,6 @@ export default function HomePage() {
     </div>
   )
 }
+
 
 
