@@ -27,7 +27,7 @@ export default function HomePage() {
   const [newsletterEmail, setNewsletterEmail] = useState('')
   const [newsletterLoading, setNewsletterLoading] = useState(false)
 
-  // DonnÃ©es dynamiques
+  // Données dynamiques
   const [jobs, setJobs] = useState<any[]>([])
   const [formations, setFormations] = useState<any[]>([])
   const [partners, setPartners] = useState<any[]>([])
@@ -75,7 +75,7 @@ export default function HomePage() {
         body: JSON.stringify({ email: newsletterEmail }),
       })
       if (res.ok) {
-        toast.success('Abonnement confirmÃ© ! Vous recevrez nos meilleures offres.')
+        toast.success('Abonnement confirmé ! Vous recevrez nos meilleures offres.')
         setNewsletterEmail('')
       } else {
         toast.error("Erreur lors de l'inscription.")
@@ -115,11 +115,11 @@ export default function HomePage() {
             </div>
 
             <span className="inline-flex items-center gap-2 bg-[#0099ff]/20 text-white/95 border border-[#00c3ff]/35 text-sm font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
-              ðŸ‡¨ðŸ‡¬ La plateforme internationale de la République du Congo
+              🇨🇬 La plateforme internationale de la République du Congo
             </span>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
               Trouvez votre{' '}
-              <span className="text-[#00c3ff]">prochaine opportunitÃ©</span>{' '}
+              <span className="text-[#00c3ff]">prochaine opportunité</span>{' '}
               professionnelle au Congo
             </h1>
             <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-10">
@@ -184,17 +184,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* â”€â”€ CATÃ‰GORIES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* â”€â”€ CATÉGORIES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="py-8 bg-white border-b border-gray-100">
         <div className="container mx-auto px-6">
-          {/* Boutons rapides â€” secteurs clÃ©s */}
+          {/* Boutons rapides "” secteurs clés */}
           <div className="flex flex-wrap justify-center gap-2 mb-3">
             {[
               { key: 'all',        label: 'Tous',             icon: 'ðŸ¢' },
               { key: 'tech',       label: 'Informatique',     icon: 'ðŸ’»' },
               { key: 'finance',    label: 'Finance',          icon: 'ðŸ’°' },
-              { key: 'sante',      label: 'SantÃ©',            icon: 'ðŸ¥' },
-              { key: 'petrole',    label: 'PÃ©trole & Gaz',    icon: 'ðŸ›¢ï¸' },
+              { key: 'sante',      label: 'Santé',            icon: 'ðŸ¥' },
+              { key: 'petrole',    label: 'Pétrole & Gaz',    icon: 'ðŸ›¢ï¸' },
               { key: 'transport',  label: 'Transport',        icon: 'ðŸš—' },
               { key: 'logistique', label: 'Logistique',       icon: 'ðŸ“¦' },
               { key: 'agro',       label: 'Agro-alimentaire', icon: 'ðŸ½ï¸' },
@@ -229,9 +229,9 @@ export default function HomePage() {
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-10">
               <div>
                 <span className="inline-flex items-center gap-2 bg-[#0099ff]/10 text-[#0099ff] text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-3">
-                  ðŸ”¥ RÃ©centes
+                  ðŸ”¥ Récentes
                 </span>
-                <h2 className="font-serif text-3xl md:text-4xl text-[#001a33]">DerniÃ¨res offres d&apos;emploi</h2>
+                <h2 className="font-serif text-3xl md:text-4xl text-[#001a33]">Dernières offres d&apos;emploi</h2>
                 <p className="text-gray-600 mt-1">{filteredJobs.length} offre{filteredJobs.length !== 1 ? 's' : ''} disponible{filteredJobs.length !== 1 ? 's' : ''}</p>
               </div>
               <Link href="/offres">
@@ -299,13 +299,13 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* â”€â”€ TÃ‰MOIGNAGES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* â”€â”€ TÉMOIGNAGES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       {testimonials.length > 0 && (
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-6">
             <div className="text-center mb-12">
               <span className="inline-flex items-center gap-2 bg-[#0099ff]/10 text-[#0099ff] text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-3">
-                ðŸ’¬ TÃ©moignages
+                ðŸ’¬ Témoignages
               </span>
               <h2 className="font-serif text-3xl md:text-4xl text-[#001a33]">Ce qu&apos;ils disent d&apos;Emploi Plus</h2>
             </div>
@@ -352,7 +352,7 @@ export default function HomePage() {
             </span>
             <h2 className="font-serif text-3xl md:text-4xl text-white mb-4">Recevez les offres par email</h2>
             <p className="text-white/75 mb-8">
-              Inscrivez-vous Ã  notre newsletter et soyez les premiers informÃ©s des nouvelles opportunitÃ©s.
+              Inscrivez-vous Ã  notre newsletter et soyez les premiers informés des nouvelles opportunités.
             </p>
             <form onSubmit={handleNewsletter} className="flex flex-col sm:flex-row gap-3">
               <Input
@@ -369,7 +369,7 @@ export default function HomePage() {
                 {newsletterLoading ? 'Inscription...' : "S'inscrire"}
               </Button>
             </form>
-            <p className="text-white/50 text-xs mt-4">Aucun spam. DÃ©sinscription en un clic.</p>
+            <p className="text-white/50 text-xs mt-4">Aucun spam. Désinscription en un clic.</p>
           </div>
         </div>
       </section>
