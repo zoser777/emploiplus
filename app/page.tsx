@@ -105,14 +105,6 @@ export default function HomePage() {
 
         <div className="container mx-auto px-6 relative">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Logo agrandi */}
-            <div className="flex justify-center mb-8">
-              <img
-                src="/images/logo.jpeg"
-                alt="Emploi Plus"
-                className="h-28 md:h-36 w-auto object-contain drop-shadow-2xl"
-              />
-            </div>
 
             <span className="inline-flex items-center gap-2 bg-[#0099ff]/20 text-white/95 border border-[#00c3ff]/35 text-sm font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
               🇨🇬 La plateforme d'offres d'emploi, de stage et bien d'autres de la République du Congo.
