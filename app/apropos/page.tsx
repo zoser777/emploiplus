@@ -11,7 +11,7 @@ import { BackToTop } from '@/components/back-to-top'
 
 const values = [
   { icon: CheckCircle2, title: 'Excellence', desc: 'Qualité et rigueur dans tout ce que nous faisons' },
-  { icon: Users, title: 'Inclusion', desc: 'Offrir des chances égales Ã  tous' },
+  { icon: Users, title: 'Inclusion', desc: 'Offrir des chances égales à tous' },
   { icon: Globe, title: 'Innovation', desc: 'Des outils numériques modernes et efficaces' },
   { icon: Shield, title: 'Confiance', desc: 'Transparence avec candidats et recruteurs' },
 ]
@@ -51,9 +51,9 @@ export default function AproposPage() {
                   Emploi Plus, votre partenaire emploi au Congo
                 </h1>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Fondée Ã  Pointe-Noire, <strong>Emploi Plus</strong> est la première plateforme numérique
+                  Fondée à Pointe-Noire, <strong>Emploi Plus</strong> est la première plateforme numérique
                   de mise en relation entre chercheurs d&apos;emploi et entreprises au Congo-Brazzaville.
-                  Notre mission : rendre l&apos;accès Ã  l&apos;emploi plus simple, plus rapide et plus équitable.
+                  Notre mission : rendre l&apos;accès à l&apos;emploi plus simple, plus rapide et plus équitable.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Nous proposons également des formations professionnelles certifiantes pour accompagner
@@ -160,7 +160,7 @@ export default function AproposPage() {
             <div className="absolute inset-0 bg-gradient-to-br from-[#001a33]/90 to-[#0066cc]/80" />
           </div>
           <div className="container mx-auto px-6 relative text-center">
-            <h2 className="font-serif text-3xl md:text-4xl text-white mb-4">Prêt Ã  rejoindre Emploi Plus ?</h2>
+            <h2 className="font-serif text-3xl md:text-4xl text-white mb-4">Prêt à rejoindre Emploi Plus ?</h2>
             <p className="text-white/70 max-w-xl mx-auto mb-8">
               Que vous soyez candidat ou entreprise, notre plateforme vous offre les outils pour réussir.
             </p>

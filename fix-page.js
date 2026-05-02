@@ -1,0 +1,18 @@
+﻿const fs = require('fs');
+let c = fs.readFileSync('app/page.tsx','utf8');
+c = c.replace(/\u00f0\u009f\u008f\u00a2/g,'🏢');
+c = c.replace(/\u00f0\u009f\u0092\u00bb/g,'💻');
+c = c.replace(/\u00f0\u009f\u0092\u00b0/g,'💰');
+c = c.replace(/\u00f0\u009f\u008f\u00a5/g,'🏥');
+c = c.replace(/\u00f0\u009f\u009b\u00a2\u00ef\u00b8\u008f/g,'🛢️');
+c = c.replace(/\u00f0\u009f\u009a\u0097/g,'🚗');
+c = c.replace(/\u00f0\u009f\u0093\u00a6/g,'📦');
+c = c.replace(/\u00f0\u009f\u008d\u00bd\u00ef\u00b8\u008f/g,'🍽️');
+c = c.replace(/\u00f0\u009f\u008f\u0097\u00ef\u00b8\u008f/g,'🏗️');
+c = c.replace(/\u00f0\u009f\u0094\u00a5/g,'🔥');
+c = c.replace(/\u00f0\u009f\u008e\u0093/g,'🎓');
+c = c.replace(/\u00f0\u009f\u0092\u00ac/g,'💬');
+c = c.replace(/\u00e2\u009c\u0089\u00ef\u00b8\u008f/g,'✉️');
+c = c.replace(/\u00c3\u00a0/g,'à');
+fs.writeFileSync('app/page.tsx', c, 'utf8');
+console.log('OK page.tsx fixed');

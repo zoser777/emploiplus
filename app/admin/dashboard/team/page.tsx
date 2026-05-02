@@ -73,7 +73,7 @@ export default function TeamPage() {
     setSaving(true)
     if (editing) {
       await fetch(`/api/admin/team/${editing.id}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
-      toast.success('Membre mis Ã  jour')
+      toast.success('Membre mis à jour')
     } else {
       await fetch('/api/admin/team', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
       toast.success('Membre ajouté')
@@ -207,7 +207,7 @@ export default function TeamPage() {
           <DialogFooter>
             <Button variant="outline" onClick={() => setModalOpen(false)}>Annuler</Button>
             <Button onClick={save} disabled={saving} className="bg-indigo-600 hover:bg-indigo-700 text-white">
-              {saving ? 'Enregistrement...' : editing ? 'Mettre Ã  jour' : 'Ajouter'}
+              {saving ? 'Enregistrement...' : editing ? 'Mettre à jour' : 'Ajouter'}
             </Button>
           </DialogFooter>
         </DialogContent>

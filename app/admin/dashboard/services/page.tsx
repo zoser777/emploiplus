@@ -43,7 +43,7 @@ export default function ServicesPage() {
     setSaving(true)
     if (editing) {
       await fetch(`/api/admin/services/${editing.id}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(form) })
-      toast.success('Service mis Ã  jour')
+      toast.success('Service mis à jour')
     } else {
       await fetch('/api/admin/services', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(form) })
       toast.success('Service créé')
@@ -151,7 +151,7 @@ export default function ServicesPage() {
           <DialogFooter>
             <Button variant="outline" onClick={() => setModalOpen(false)}>Annuler</Button>
             <Button onClick={save} disabled={saving} className="bg-teal-600 hover:bg-teal-700 text-white">
-              {saving ? 'Enregistrement...' : editing ? 'Mettre Ã  jour' : 'Créer'}
+              {saving ? 'Enregistrement...' : editing ? 'Mettre à jour' : 'Créer'}
             </Button>
           </DialogFooter>
         </DialogContent>
