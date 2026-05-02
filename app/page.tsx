@@ -344,7 +344,7 @@ export default function HomePage() {
             </span>
             <h2 className="font-serif text-3xl md:text-4xl text-white mb-4">Recevez les offres par email</h2>
             <p className="text-white/75 mb-8">
-              Inscrivez-vous Ã  notre newsletter et soyez les premiers informés des nouvelles opportunités.
+              Inscrivez-vous à notre newsletter et soyez les premiers informés des nouvelles opportunités.
             </p>
             <form onSubmit={handleNewsletter} className="flex flex-col sm:flex-row gap-3">
               <Input
