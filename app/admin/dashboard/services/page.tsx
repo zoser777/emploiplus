@@ -46,7 +46,7 @@ export default function ServicesPage() {
       toast.success('Service mis Ã  jour')
     } else {
       await fetch('/api/admin/services', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(form) })
-      toast.success('Service crÃ©Ã©')
+      toast.success('Service créé')
     }
     setSaving(false); setModalOpen(false); load()
   }
@@ -58,7 +58,7 @@ export default function ServicesPage() {
 
   const del = async (id: string) => {
     await fetch(`/api/admin/services/${id}`, { method: 'DELETE' })
-    toast.success('Service supprimÃ©'); load()
+    toast.success('Service supprimé'); load()
   }
 
   return (
@@ -111,7 +111,7 @@ export default function ServicesPage() {
                       </AlertDialogTrigger>
                       <AlertDialogContent>
                         <AlertDialogHeader><AlertDialogTitle>Supprimer ce service ?</AlertDialogTitle>
-                          <AlertDialogDescription>Cette action est irrÃ©versible.</AlertDialogDescription>
+                          <AlertDialogDescription>Cette action est irréversible.</AlertDialogDescription>
                         </AlertDialogHeader>
                         <AlertDialogFooter>
                           <AlertDialogCancel>Annuler</AlertDialogCancel>
@@ -132,8 +132,8 @@ export default function ServicesPage() {
           <DialogHeader><DialogTitle>{editing ? 'Modifier le service' : 'Nouveau service'}</DialogTitle></DialogHeader>
           <div className="space-y-4 py-2">
             <div className="space-y-1.5"><Label>Titre *</Label><Input value={form.title} onChange={e => set('title', e.target.value)} placeholder="Ex: Publication d'offres" /></div>
-            <div className="space-y-1.5"><Label>Description *</Label><Textarea value={form.desc} onChange={e => set('desc', e.target.value)} rows={3} placeholder="DÃ©crivez ce service..." /></div>
-            <div className="space-y-1.5"><Label>IcÃ´ne</Label>
+            <div className="space-y-1.5"><Label>Description *</Label><Textarea value={form.desc} onChange={e => set('desc', e.target.value)} rows={3} placeholder="Décrivez ce service..." /></div>
+            <div className="space-y-1.5"><Label>Icône</Label>
               <div className="flex flex-wrap gap-2">
                 {ICONS.map(ic => (
                   <button key={ic} type="button" onClick={() => set('icon', ic)}
@@ -151,7 +151,7 @@ export default function ServicesPage() {
           <DialogFooter>
             <Button variant="outline" onClick={() => setModalOpen(false)}>Annuler</Button>
             <Button onClick={save} disabled={saving} className="bg-teal-600 hover:bg-teal-700 text-white">
-              {saving ? 'Enregistrement...' : editing ? 'Mettre Ã  jour' : 'CrÃ©er'}
+              {saving ? 'Enregistrement...' : editing ? 'Mettre Ã  jour' : 'Créer'}
             </Button>
           </DialogFooter>
         </DialogContent>

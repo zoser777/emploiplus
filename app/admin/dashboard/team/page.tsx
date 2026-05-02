@@ -68,7 +68,7 @@ export default function TeamPage() {
   }
 
   const save = async () => {
-    if (!form.name || !form.role) { toast.error('Nom et rÃ´le requis'); return }
+    if (!form.name || !form.role) { toast.error('Nom et rôle requis'); return }
     const payload = { ...form, initials: form.initials || autoInitials(form.name) }
     setSaving(true)
     if (editing) {
@@ -76,7 +76,7 @@ export default function TeamPage() {
       toast.success('Membre mis Ã  jour')
     } else {
       await fetch('/api/admin/team', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
-      toast.success('Membre ajoutÃ©')
+      toast.success('Membre ajouté')
     }
     setSaving(false); setModalOpen(false); load()
   }
@@ -88,13 +88,13 @@ export default function TeamPage() {
 
   const del = async (id: string) => {
     await fetch(`/api/admin/team/${id}`, { method: 'DELETE' })
-    toast.success('Membre supprimÃ©'); load()
+    toast.success('Membre supprimé'); load()
   }
 
   return (
     <AdminLayout>
       <div className="p-4 md:p-6 max-w-7xl mx-auto">
-        <PageHeader title="Ã‰quipe" desc={`${members.length} membre${members.length !== 1 ? 's' : ''} â€” affichÃ© sur la page Ã€ propos`}
+        <PageHeader title="Équipe" desc={`${members.length} membre${members.length !== 1 ? 's' : ''} "” affiché sur la page À propos`}
           action={
             <Button onClick={openNew} className="bg-indigo-600 hover:bg-indigo-700 text-white">
               <Plus className="w-4 h-4 mr-2" />Ajouter un membre
@@ -108,7 +108,7 @@ export default function TeamPage() {
           </div>
         ) : members.length === 0 ? (
           <div className="bg-white rounded-xl border border-gray-200">
-            <EmptyState icon={Users} title="Aucun membre" desc="Ajoutez les membres de votre Ã©quipe (affichÃ©s sur la page Ã€ propos)"
+            <EmptyState icon={Users} title="Aucun membre" desc="Ajoutez les membres de votre équipe (affichés sur la page À propos)"
               action={<Button onClick={openNew} className="bg-indigo-600 hover:bg-indigo-700 text-white"><Plus className="w-4 h-4 mr-1" />Ajouter</Button>} />
           </div>
         ) : (
@@ -139,7 +139,7 @@ export default function TeamPage() {
                       <button className="p-1.5 rounded hover:bg-gray-100 text-gray-400 hover:text-red-500 transition-colors"><Trash2 className="w-3.5 h-3.5" /></button>
                     </AlertDialogTrigger>
                     <AlertDialogContent>
-                      <AlertDialogHeader><AlertDialogTitle>Supprimer {m.name} ?</AlertDialogTitle><AlertDialogDescription>Ce membre sera retirÃ© de l&apos;Ã©quipe.</AlertDialogDescription></AlertDialogHeader>
+                      <AlertDialogHeader><AlertDialogTitle>Supprimer {m.name} ?</AlertDialogTitle><AlertDialogDescription>Ce membre sera retiré de l&apos;équipe.</AlertDialogDescription></AlertDialogHeader>
                       <AlertDialogFooter><AlertDialogCancel>Annuler</AlertDialogCancel><AlertDialogAction onClick={() => del(m.id)} className="bg-red-600 hover:bg-red-700">Supprimer</AlertDialogAction></AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>
@@ -154,11 +154,11 @@ export default function TeamPage() {
         <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto">
           <DialogHeader><DialogTitle>{editing ? 'Modifier le membre' : 'Nouveau membre'}</DialogTitle></DialogHeader>
           <div className="space-y-4 py-2">
-            {/* AperÃ§u avatar */}
+            {/* Aperçu avatar */}
             <div className="flex justify-center">
               {imagePreview ? (
                 <div className="relative">
-                  <img src={imagePreview} alt="AperÃ§u" className="w-20 h-20 rounded-full object-cover border-4 border-gray-100" />
+                  <img src={imagePreview} alt="Aperçu" className="w-20 h-20 rounded-full object-cover border-4 border-gray-100" />
                   <button onClick={() => { setImagePreview(''); set('image_url', '') }}
                     className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-red-600">
                     <X className="w-3 h-3" />
@@ -179,13 +179,13 @@ export default function TeamPage() {
                 <span className="text-sm text-gray-500">Cliquer pour importer une photo</span>
                 <input type="file" accept="image/*" className="hidden" onChange={handleImageUpload} />
               </label>
-              <p className="text-xs text-gray-400">JPG, PNG â€” max 2 Mo. Remplace les initiales si prÃ©sente.</p>
+              <p className="text-xs text-gray-400">JPG, PNG "” max 2 Mo. Remplace les initiales si présente.</p>
             </div>
 
             <div className="space-y-1.5"><Label>Nom complet *</Label><Input value={form.name} onChange={e => set('name', e.target.value)} placeholder="Ex: Jean-Marc Bakala" /></div>
-            <div className="space-y-1.5"><Label>Fonction *</Label><Input value={form.role} onChange={e => set('role', e.target.value)} placeholder="Ex: Directeur GÃ©nÃ©ral" /></div>
+            <div className="space-y-1.5"><Label>Fonction *</Label><Input value={form.role} onChange={e => set('role', e.target.value)} placeholder="Ex: Directeur Général" /></div>
             <div className="space-y-1.5">
-              <Label>Initiales <span className="text-gray-400 text-xs">â€” auto si vide</span></Label>
+              <Label>Initiales <span className="text-gray-400 text-xs">"” auto si vide</span></Label>
               <Input value={form.initials} onChange={e => set('initials', e.target.value.toUpperCase().slice(0,2))} placeholder="JM" maxLength={2} />
             </div>
             <div className="space-y-1.5"><Label>Bio</Label><Textarea value={form.bio} onChange={e => set('bio', e.target.value)} rows={2} placeholder="Courte biographie..." /></div>
@@ -200,7 +200,7 @@ export default function TeamPage() {
               </div>
             )}
             <div className="flex items-center justify-between">
-              <div><Label>Visible</Label><p className="text-xs text-gray-400">Sur la page Ã€ propos</p></div>
+              <div><Label>Visible</Label><p className="text-xs text-gray-400">Sur la page À propos</p></div>
               <Switch checked={form.isActive} onCheckedChange={v => set('isActive', v)} />
             </div>
           </div>

@@ -115,7 +115,7 @@ export default function HomePage() {
             </div>
 
             <span className="inline-flex items-center gap-2 bg-[#0099ff]/20 text-white/95 border border-[#00c3ff]/35 text-sm font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
-              🇨🇬 La plateforme internationale de la République du Congo
+              🇨🇬 La plateforme d'offres d'emploi, de stage et bien d'autres de la République du Congo.
             </span>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
               Trouvez votre{' '}
@@ -123,7 +123,7 @@ export default function HomePage() {
               professionnelle au Congo
             </h1>
             <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-10">
-              Emploi Plus connecte les talents avec les meilleures entreprises Ã  Brazzaville et Pointe-Noire.
+              Emploi Plus connecte les talents avec les meilleures entreprises en République du Congo.
             </p>
 
             {/* Barre de recherche */}

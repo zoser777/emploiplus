@@ -10,9 +10,9 @@ import { AuthModal } from '@/components/auth-modal'
 import { BackToTop } from '@/components/back-to-top'
 
 const values = [
-  { icon: CheckCircle2, title: 'Excellence', desc: 'QualitÃ© et rigueur dans tout ce que nous faisons' },
-  { icon: Users, title: 'Inclusion', desc: 'Offrir des chances Ã©gales Ã  tous' },
-  { icon: Globe, title: 'Innovation', desc: 'Des outils numÃ©riques modernes et efficaces' },
+  { icon: CheckCircle2, title: 'Excellence', desc: 'Qualité et rigueur dans tout ce que nous faisons' },
+  { icon: Users, title: 'Inclusion', desc: 'Offrir des chances égales Ã  tous' },
+  { icon: Globe, title: 'Innovation', desc: 'Des outils numériques modernes et efficaces' },
   { icon: Shield, title: 'Confiance', desc: 'Transparence avec candidats et recruteurs' },
 ]
 
@@ -51,13 +51,13 @@ export default function AproposPage() {
                   Emploi Plus, votre partenaire emploi au Congo
                 </h1>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  FondÃ©e Ã  Pointe-Noire, <strong>Emploi Plus</strong> est la premiÃ¨re plateforme numÃ©rique
+                  Fondée Ã  Pointe-Noire, <strong>Emploi Plus</strong> est la première plateforme numérique
                   de mise en relation entre chercheurs d&apos;emploi et entreprises au Congo-Brazzaville.
-                  Notre mission : rendre l&apos;accÃ¨s Ã  l&apos;emploi plus simple, plus rapide et plus Ã©quitable.
+                  Notre mission : rendre l&apos;accès Ã  l&apos;emploi plus simple, plus rapide et plus équitable.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  Nous proposons Ã©galement des formations professionnelles certifiantes pour accompagner
-                  les Congolais dans le dÃ©veloppement de leurs compÃ©tences et leur insertion professionnelle.
+                  Nous proposons également des formations professionnelles certifiantes pour accompagner
+                  les Congolais dans le développement de leurs compétences et leur insertion professionnelle.
                 </p>
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   {values.map((value) => (
@@ -82,7 +82,7 @@ export default function AproposPage() {
                 <div className="rounded-3xl overflow-hidden h-96 relative">
                   <img
                     src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
-                    alt="Ã‰quipe Emploi Plus"
+                    alt="Équipe Emploi Plus"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#001a33]/60 to-transparent" />
@@ -99,16 +99,16 @@ export default function AproposPage() {
           </div>
         </section>
 
-        {/* â”€â”€ Ã‰QUIPE â”€â”€ */}
+        {/* â”€â”€ ÉQUIPE â”€â”€ */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-6">
             <div className="text-center mb-12">
               <span className="inline-flex items-center gap-2 bg-[#0099ff]/10 text-[#0099ff] text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-3">
-                ðŸ‘¥ Notre Ã©quipe
+                ðŸ‘¥ Notre équipe
               </span>
-              <h2 className="font-serif text-3xl text-[#001a33]">Les personnes derriÃ¨re Emploi Plus</h2>
+              <h2 className="font-serif text-3xl text-[#001a33]">Les personnes derrière Emploi Plus</h2>
               <p className="text-gray-500 mt-2 max-w-xl mx-auto">
-                Une Ã©quipe passionnÃ©e, engagÃ©e pour le dÃ©veloppement de l&apos;emploi au Congo-Brazzaville.
+                Une équipe passionnée, engagée pour le développement de l&apos;emploi au Congo-Brazzaville.
               </p>
             </div>
 
@@ -117,7 +117,7 @@ export default function AproposPage() {
             ) : team.length === 0 ? (
               <div className="text-center py-10 text-gray-400">
                 <Users className="w-12 h-12 mx-auto mb-3 opacity-30" />
-                <p>L&apos;Ã©quipe sera bientÃ´t prÃ©sentÃ©e.</p>
+                <p>L&apos;équipe sera bientôt présentée.</p>
               </div>
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -160,9 +160,9 @@ export default function AproposPage() {
             <div className="absolute inset-0 bg-gradient-to-br from-[#001a33]/90 to-[#0066cc]/80" />
           </div>
           <div className="container mx-auto px-6 relative text-center">
-            <h2 className="font-serif text-3xl md:text-4xl text-white mb-4">PrÃªt Ã  rejoindre Emploi Plus ?</h2>
+            <h2 className="font-serif text-3xl md:text-4xl text-white mb-4">Prêt Ã  rejoindre Emploi Plus ?</h2>
             <p className="text-white/70 max-w-xl mx-auto mb-8">
-              Que vous soyez candidat ou entreprise, notre plateforme vous offre les outils pour rÃ©ussir.
+              Que vous soyez candidat ou entreprise, notre plateforme vous offre les outils pour réussir.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <Link href="/offres">

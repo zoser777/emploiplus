@@ -21,7 +21,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-sm leading-relaxed max-w-xs">
-              Emploi Plus est la premiere plateforme de mise en relation entre chercheurs d&apos;emploi et entreprises au Congo-Brazzaville.
+              Emploi Plus est parmi les plateformes de mise en relation entre chercheurs d'emploi et entreprises au Congo-Brazzaville.
             </p>
           </div>
 
@@ -32,7 +32,7 @@ export function Footer() {
             </h4>
             <div className="flex flex-col gap-2">
               <Link href="/" className="text-sm hover:text-[#00c3ff] transition-colors">Accueil</Link>
-              <Link href="/offres" className="text-sm hover:text-[#00c3ff] transition-colors">Offres d&apos;emploi</Link>
+              <Link href="/offres" className="text-sm hover:text-[#00c3ff] transition-colors">Offres d'emplois</Link>
               <Link href="/formations" className="text-sm hover:text-[#00c3ff] transition-colors">Formations</Link>
               <Link href="/blog" className="text-sm hover:text-[#00c3ff] transition-colors">Blog</Link>
               <Link href="/faq" className="text-sm hover:text-[#00c3ff] transition-colors">FAQ</Link>
@@ -98,8 +98,8 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-white/10 py-5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-          <span>&copy; 2025 Emploi Plus - Groupe Emploi Plus. Tous droits reserves.</span>
-          <span>Fait avec ❤️ au Congo-Brazzaville</span>
+          <span>&copy; 2026 Emploi Plus - Groupe Emploi Plus. Tous droits reservés.</span>
+          <span>Fait au Congo-Brazzaville</span>
         </div>
       </div>
     </footer>
