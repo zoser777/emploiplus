@@ -16,23 +16,22 @@ const values = [
   { icon: Shield, title: 'Confiance', desc: 'Transparence avec candidats et recruteurs' },
 ]
 
-const heroStats = [
-  { num: '1 200+', label: 'Offres actives' },
-  { num: '350+', label: 'Partenaires' },
-  { num: '8 500+', label: 'Candidats' },
-]
-
 export default function AproposPage() {
   const [team, setTeam] = useState<any[]>([])
+  const [heroStats, setHeroStats] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('/api/team')
-      .then(r => r.json())
-      .then(data => setTeam(Array.isArray(data) ? data : []))
-      .catch(() => setTeam([]))
-      .finally(() => setLoading(false))
-  }, [])
+  fetch('/api/team')
+    .then(r => r.json())
+    .then(data => setTeam(Array.isArray(data) ? data : []))
+    .catch(() => setTeam([]))
+    .finally(() => setLoading(false))
+  fetch('/api/site-stats')
+    .then(r => r.json())
+    .then(data => setHeroStats(Array.isArray(data) ? data.map((s: any) => ({ num: s.value, label: s.label })) : []))
+    .catch(() => setHeroStats([]))
+}, [])
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -81,7 +80,7 @@ export default function AproposPage() {
               <div className="relative">
                 <div className="rounded-3xl overflow-hidden h-96 relative">
                   <img
-                    src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
+                    src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80"
                     alt="Équipe Emploi Plus"
                     className="w-full h-full object-cover"
                   />
